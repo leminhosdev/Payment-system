@@ -1,0 +1,17 @@
+version:  '3.8'
+
+services:
+  db:
+    image: mysql:8.0.33
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: payments
+      MYSQL_USER: adminuser
+      MYSQL_PASSWORD: password123
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
