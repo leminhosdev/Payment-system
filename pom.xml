@@ -13,10 +13,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>payment-system</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>17</java.version>
 		<javajwt.version>4.4.0</javajwt.version>
+		<efi.version>1.0.3</efi.version>
+		<json.version>20231013</json.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,6 +71,20 @@
 			<artifactId>java-jwt</artifactId>
 			<version>${javajwt.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${json.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.efipay.efisdk</groupId>
+			<artifactId>sdk-java-apis-efi</artifactId>
+			<version>${efi.version}</version>
+		</dependency>
+
+
 	</dependencies>
 
 

@@ -27,6 +27,8 @@ public class User implements UserDetails {
 
     private boolean enabled;
 
+    private String role;
+
     public User(Long id, String name, String email, String password, String verificationCode, boolean enabled) {
         this.id = id;
         this.name = name;
@@ -36,10 +38,11 @@ public class User implements UserDetails {
         this.enabled = enabled;
     }
 
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, String role) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.role = role;
     }
 
     public User() {
@@ -47,6 +50,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+
         return null;
     }
 

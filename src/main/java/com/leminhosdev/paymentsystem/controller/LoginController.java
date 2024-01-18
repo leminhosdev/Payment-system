@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/auth")
 public class LoginController {
 
     @Autowired
@@ -28,7 +28,6 @@ public class LoginController {
         UsernamePasswordAuthenticationToken usernamePassword = new UsernamePasswordAuthenticationToken(
                 authenticationRequest.email(), authenticationRequest.password()
         );
-
         var auth = authenticationManager.authenticate(usernamePassword);
 
         var token = tokenService.generateToken( (User) auth.getPrincipal());
